@@ -104,7 +104,7 @@
   home-manager."username" = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "username" = import ./home.nix;`)}
+      "username" = import ./home.nix;
       modules = [
         ./home.nix
         inputs.self.outputs.homeManagerModules.default
