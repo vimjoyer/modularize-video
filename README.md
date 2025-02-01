@@ -101,16 +101,19 @@
 { inputs, ... }: {
 
   # may look a bit different
-  home-manager."username" = {
+  home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "username" = import ./home.nix;
-      modules = [
-        ./home.nix
-        inputs.self.outputs.homeManagerModules.default
-      ];
+      # "username" = import ./home.nix;
+      "username" = {
+        imports = [
+            ./home.nix
+            inputs.self.outputs.homeManagerModules.default
+        ];
+      }
     };
   };
 
 }
+
 ```
