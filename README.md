@@ -107,10 +107,10 @@
       # "username" = import ./home.nix;
       "username" = {
         imports = [
-            ./home.nix
-            inputs.self.outputs.homeManagerModules.default
+          ./home.nix
+          inputs.self.outputs.homeManagerModules.default
         ];
-      }
+      };
     };
   };
 
